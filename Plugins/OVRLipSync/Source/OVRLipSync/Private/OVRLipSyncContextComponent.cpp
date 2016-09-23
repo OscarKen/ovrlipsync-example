@@ -94,11 +94,14 @@ void UOVRLipSyncContextComponent::ProcessFrame(const uint8* AudioData, const int
     }
 
     // dispatch the event
-    FFunctionGraphTask::CreateAndDispatchWhenReady([=]()
+    if (VisemeGenerated.IsBound())
     {
-        VisemeGenerated.Broadcast(CurrentFrame);
+        FFunctionGraphTask::CreateAndDispatchWhenReady([=]()
+        {
+            VisemeGenerated.Broadcast(CurrentFrame);
+        }
+        , TStatId(), nullptr, ENamedThreads::GameThread);
     }
-    , TStatId(), nullptr, ENamedThreads::GameThread);
 }
 
 int UOVRLipSyncContextComponent::GetPhonemeFrame(FOVRLipSyncFrame *OutFrame)
