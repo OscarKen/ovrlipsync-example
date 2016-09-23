@@ -1,3 +1,4 @@
 # ovrlipsync-example
 Example Project for UE4 Unofficial OVRLipSync Plugin
-For more information: http://blog.csdn.net/xoyojank/article/details/52636952
+# more information
+http://blog.csdn.net/xoyojank/article/details/52636952
