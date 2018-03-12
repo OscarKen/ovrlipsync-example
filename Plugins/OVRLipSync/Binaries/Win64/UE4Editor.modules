@@ -1,8 +1,7 @@
 {
-	"Changelist" : 3039270,
-	"BuildId" : "90d3c832-5b80-4237-90bb-c51c3950647c",
-	"Modules" : 
+	"BuildId": "3709383",
+	"Modules": 
 	{
-		"OVRLipSync" : "UE4Editor-OVRLipSync.dll"
+		"OVRLipSync": "UE4Editor-OVRLipSync.dll"
 	}
 }
