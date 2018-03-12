@@ -1,5 +1,5 @@
-#include "OVRLipSyncPrivatePCH.h"
 #include "LipSyncTextureFlipComponent.h"
+#include "OVRLipSyncPrivatePCH.h"
 
 ULipSyncTextureFlipComponent::ULipSyncTextureFlipComponent(const FObjectInitializer& ObjectInitializer)
     : Super(ObjectInitializer)

@@ -5,21 +5,10 @@ using System.Collections.Generic;
 
 public class LipSyncTestTarget : TargetRules
 {
-	public LipSyncTestTarget(TargetInfo Target)
+	public LipSyncTestTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-	}
 
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "LipSyncTest" } );
+		ExtraModuleNames.AddRange( new string[] { "LipSyncTest" } );
 	}
 }

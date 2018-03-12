@@ -1,5 +1,5 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
-
+#include "OVRLipSync.h"
 #include "OVRLipSyncPrivatePCH.h"
 #include "Voice.h"
 
@@ -29,7 +29,7 @@ dll_ovrlipsyncProcessFrameInterleaved OVRLipSyncProcessFrameInterleaved;
 void FOVRLipSyncModule::StartupModule()
 {
     //Define Paths for direct dll bind
-    FString BinariesRoot = FPaths::Combine(*FPaths::GameDir(), TEXT("Binaries"));
+    FString BinariesRoot = FPaths::Combine(*FPaths::ProjectDir(), TEXT("Binaries"));
     IPluginManager &plgnMgr = IPluginManager::Get();
     TSharedPtr<IPlugin> plugin = plgnMgr.FindPlugin("OVRLipSync");
     if (!plugin.IsValid())

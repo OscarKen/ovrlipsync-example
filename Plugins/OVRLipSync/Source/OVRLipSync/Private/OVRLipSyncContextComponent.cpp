@@ -1,5 +1,5 @@
-#include "OVRLipSyncPrivatePCH.h"
 #include "OVRLipSyncContextComponent.h"
+#include "OVRLipSyncPrivatePCH.h"
 
 
 UOVRLipSyncContextComponent::UOVRLipSyncContextComponent(const FObjectInitializer& ObjectInitializer)

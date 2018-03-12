@@ -1,5 +1,5 @@
-#include "OVRLipSyncPrivatePCH.h"
 #include "LipSyncMorphTargetComponent.h"
+#include "OVRLipSyncPrivatePCH.h"
 
 ULipSyncMorphTargetComponent::ULipSyncMorphTargetComponent(const FObjectInitializer& ObjectInitializer)
     : Super(ObjectInitializer)

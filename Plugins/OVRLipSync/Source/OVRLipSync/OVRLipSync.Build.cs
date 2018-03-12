@@ -20,10 +20,11 @@ public class OVRLipSync : ModuleRules
         get { return Path.GetFullPath(Path.Combine(ModulePath, "../../Binaries/")); }
     }
 
-	public OVRLipSync(TargetInfo Target)
+	public OVRLipSync(ReadOnlyTargetRules Target) : base(Target)
 	{
-		
-		PublicIncludePaths.AddRange(
+        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+
+        PublicIncludePaths.AddRange(
 			new string[] {
 				"OVRLipSync/Public"
 				// ... add public include paths required here ...
@@ -49,7 +50,6 @@ public class OVRLipSync : ModuleRules
                 "InputCore",
                 "RHI",
                 "Voice",
-                "OnlineSubsystem",
                 "OnlineSubsystemUtils"
 				// ... add other public dependencies that you statically link with here ...
 			}
@@ -67,8 +67,7 @@ public class OVRLipSync : ModuleRules
                 "InputCore",
                 "RHI",
                 "Voice",
-                "OnlineSubsystem",
-                "OnlineSubsystemUtils"
+                "OnlineSubsystem"
             }
 			);
 		
@@ -83,7 +82,7 @@ public class OVRLipSync : ModuleRules
         LoadOVRLipSyncLib(Target); 
 	}
 
-    public bool LoadOVRLipSyncLib(TargetInfo Target)
+    public bool LoadOVRLipSyncLib(ReadOnlyTargetRules Target)
     {
         bool isLibrarySupported = false;
 
